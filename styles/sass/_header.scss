@@ -1,0 +1,38 @@
+$colorLightBlue: #487E95;
+$fontRegular400:  'Abril Fatface', cursive;
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    width: 100%;
+    background-color: $colorLightBlue;
+}
+
+input[type="text"] {
+    border: 2px solid $colorLightBlue;
+    font-size: 1.3rem;
+    color: black;
+    padding: 0.5rem 0.75rem;
+}
+
+.search-btn {
+    border: 2px solid white;
+    color: white;
+    letter-spacing: 2px;
+    font-size: 1.3rem;
+    padding: 0.5rem 0.75rem;
+    font-family: $fontRegular400;
+    border-radius: 2px;
+    background-color: transparent;
+    margin-left: 11px;
+    text-transform: uppercase;
+}
+
+#home-form{
+    display: flex;
+    align-items: center;
+}
