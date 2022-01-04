@@ -1,0 +1,12 @@
+//===============FONT================
+
+$fontRegular400:  'Abril Fatface', cursive;
+$fontBold700: 'Newsreader', serif;
+
+
+h3 {
+    font-size: 2rem;
+    font-family: $fontBold700;
+    color: white;
+    letter-spacing: 2px;
+}
