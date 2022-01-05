@@ -1,17 +1,5 @@
 
-
-//===============COLOR PALET ================
-
-$colorLightPastel: #F4F5DB;
-$colorPastel: #D9DAB0;
-$colorLightBlue: #487E95;
-$colorBlue: #23689B;
-
-
-
-
-@import "./globalStyle.scss";
-
-@import "./typography.scss";
-
-@import "./header.scss";
+@import "./partials/root";
+@import "./partials/typography";
+@import "./partials/globalStyle.scss";
+@import "./partials/header.scss";

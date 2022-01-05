@@ -1,6 +1,5 @@
-$colorLightBlue: #487E95;
-$fontRegular400:  'Abril Fatface', cursive;
 
+// nav bar section start here
 nav {
     display: flex;
     flex-direction: row;
@@ -10,6 +9,14 @@ nav {
     padding-right: 2rem;
     width: 100%;
     background-color: $colorLightBlue;
+
+    div h3 {
+    font-size: 2rem;
+    font-family: $fontBold700;
+    color: $colorLightPastel;
+    letter-spacing: 2px;
+}
+
 }
 
 input[type="text"] {
