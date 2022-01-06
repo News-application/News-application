@@ -1,47 +1,75 @@
-.list-of-news {
+.search-output-title{
+    margin: 1rem 0 1rem 5rem;
+    text-transform: capitalize;
+    font-size: 2rem;
+}
+.user-input-search-section {
     display: flex;
-    flex-direction: row;
+    align-items: center;
+
+    .search-left-btn,
+    .search-right-btn{
+        font-size: 2rem;
+        color: $colorBlue;
+        margin: 0 1rem;
+        cursor: pointer;
+        &:hover{
+            color: $colorLightBlue;
+        }
+    }
+
+    .user-search-news-box{
+        overflow-x: hidden;
+        ul{
+            display: flex;
+            
+            li{
+                height: 500px;
+                border:  2px solid $colorBlue;
+                flex: 0 0 25%;
+                overflow-y: scroll;
+                padding: 1rem;
+                margin: 0 1rem;
+
+                h3{
+                    font-size: 1.2rem;
+                    color: $colorBlue;
+                    margin-bottom: 1rem;
+                }
+                p {
+                    font-size: 1rem;
+                    letter-spacing: 1px;
+                    line-height: 1.2;
+                    font-family: $fontRegular400;
+                    margin-top: 1rem;
+                }
+                button{
+                    font-family: $fontRegular400;
+                    border: 2px solid white;
+                    letter-spacing: 2px;
+                    font-size: 0.75rem;
+                    padding: 0.5rem 0.75rem;
+                    border-radius: 2px;
+                    background-color: $colorBlue;
+                    text-transform: uppercase;
+                }
+                a {
+                    text-decoration: none;    
+                    color: white;
+                }
+                img{
+                    width: 100%;
+                }
+            }
+        }
+    }
 }
 
-h3 {
-    font-size: 1.5rem;
-}
 
-p {
-    font-size: 1rem;
-    letter-spacing: 1px;
-    line-height: 1.2;
-    font-family: $fontRegular400;
-}
 
-button{
-    font-family: $fontRegular400;
-    border: 2px solid white;
-    letter-spacing: 2px;
-    font-size: 1.3rem;
-    padding: 0.5rem 0.75rem;
-    border-radius: 2px;
-    background-color: $colorBlue;
-    margin-left: 11px;
-    text-transform: uppercase;
-}
 
-a {
-    text-decoration: none;    
-    color: white;
-}
 
-.fa-chevron-left{
-    transform: translate(15px, 244px);
-}
 
-.right-arrow{
-    text-align: end;
-}
-.fa-chevron-right{
-    transform: translate(-15px, -244px);
-}
-// .user-search-section {
-//     display: flex;
-//     flex-direction: row;
-// }
+
+
+

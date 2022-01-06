@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,19 +11,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato&family=Newsreader:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/style.css">
     <title>News</title>
-    
+
 </head>
+
 <body>
     <!-- header start here -->
     <header>
-        <nav>
-            <div>
+        <nav class="navbar">
+            <div class="news-logo">
                 <h3>NEWS</h3>
             </div>
-            <div>
+            <div class="navbar-menu">
                 <form action="#" id="home-form">
                     <label for="search-input" class="sr-only">Search Here</label>
-                    <input type="text" class="search-input" id="search-input">
+                    <input type="text" class="search-input" id="search-input" >
                     <input type="submit" class="search-btn" id="search-btn" value="Search">
                 </form>
                 <!-- language dropdown menu will be here-->
@@ -35,15 +37,19 @@
     <main>
         <!-- search-output-section start here -->
         <section class="user-search-section">
-            <div>
-                <span><i class="fas fa-chevron-left"></i></span>
-            </div>
-            <div class="user-search-news-box" id="user-search-news">
-                <!-- news will appear here -->
-                <ul class="list-of-news"></ul>
-            </div>
-            <div class="right-arrow">
-                <span><i class="fas fa-chevron-right"></i></span>
+            <h3 class="search-output-title"> <span class="search-output">World</span> </h3>
+            <div class="user-input-search-section">
+                <div class="search-left-btn">
+                    <span><i class="fas fa-chevron-left"></i></span>
+                </div>
+                <div class="user-search-news-box" id="user-search-news-box">
+                    <ul class="list-of-news">
+
+                    </ul>
+                </div>
+                <div class="search-right-btn">
+                    <span><i class="fas fa-chevron-right"></i></span>
+                </div>
             </div>
         </section>
         <!-- search-output-section end here -->
@@ -85,11 +91,13 @@
 
     <!-- footer section start here -->
     <footer>
-        <p class="footer-copyright">Copyright &copy; 2021 <span><a href="https://junocollege.com/">Juno College of Technology</a></span></p>
+        <p class="footer-copyright">Copyright &copy; 2021 <span><a href="https://junocollege.com/">Juno College of
+                    Technology</a></span></p>
     </footer>
     <!-- footer section end here -->
-   
+
     <!-- js link -->
     <script src="./app.js"></script>
 </body>
+
 </html>

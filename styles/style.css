@@ -1,14 +1,3 @@
-h3 {
-  font-size: 2rem;
-  font-family: "Newsreader", serif;
-  color: #000;
-  letter-spacing: 2px;
-}
-
-p {
-  color: #000;
-}
-
 html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
@@ -250,7 +239,6 @@ html {
   margin: 0;
   padding: 0;
   font-size: 125%;
-  overflow-x: hidden;
 }
 
 .wrapper {
@@ -261,14 +249,6 @@ html {
 
 li {
   list-style: none;
-  height: 500px;
-  border: 2px solid #23689B;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 25%;
-          flex: 0 0 25%;
-  overflow-y: scroll;
-  padding: 1rem;
-  margin: 0 1rem;
 }
 
 ul {
@@ -276,11 +256,21 @@ ul {
   margin: 0;
 }
 
-img {
-  width: 100%;
+h1, h2, h3, h4 {
+  font-family: "Newsreader", serif;
+  color: #000;
+  letter-spacing: 2px;
+  padding: 0;
+  margin: 0;
 }
 
-nav {
+p {
+  font-family: "Lato", sans-serif;
+  letter-spacing: 1px;
+  font-size: 1rem;
+}
+
+.navbar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -294,26 +284,31 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding: 1rem 2rem;
   width: 100%;
   background-color: #487E95;
 }
-nav div h3 {
+.navbar .news-logo h3 {
   font-size: 2rem;
   font-family: "Newsreader", serif;
   color: #F4F5DB;
   letter-spacing: 2px;
 }
-
-input[type=text] {
+.navbar .news-logo h3 .navbar-menu #home-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.navbar .news-logo h3 .navbar-menu #home-form input[type=text] {
   border: 2px solid #487E95;
   font-size: 1.3rem;
   color: black;
   padding: 0.5rem 0.75rem;
 }
-
-.search-btn {
+.navbar .news-logo h3 .navbar-menu #home-form input[type=submit] {
   border: 2px solid white;
   color: white;
   letter-spacing: 2px;
@@ -326,7 +321,13 @@ input[type=text] {
   text-transform: uppercase;
 }
 
-#home-form {
+.search-output-title {
+  margin: 1rem 0 1rem 5rem;
+  text-transform: capitalize;
+  font-size: 2rem;
+}
+
+.user-input-search-section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -334,55 +335,61 @@ input[type=text] {
       -ms-flex-align: center;
           align-items: center;
 }
-
-.list-of-news {
+.user-input-search-section .search-left-btn,
+.user-input-search-section .search-right-btn {
+  font-size: 2rem;
+  color: #23689B;
+  margin: 0 1rem;
+  cursor: pointer;
+}
+.user-input-search-section .search-left-btn:hover,
+.user-input-search-section .search-right-btn:hover {
+  color: #487E95;
+}
+.user-input-search-section .user-search-news-box {
+  overflow-x: hidden;
+}
+.user-input-search-section .user-search-news-box ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
 }
-
-h3 {
-  font-size: 1.5rem;
+.user-input-search-section .user-search-news-box ul li {
+  height: 500px;
+  border: 2px solid #23689B;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 25%;
+          flex: 0 0 25%;
+  overflow-y: scroll;
+  padding: 1rem;
+  margin: 0 1rem;
 }
-
-p {
+.user-input-search-section .user-search-news-box ul li h3 {
+  font-size: 1.2rem;
+  color: #23689B;
+  margin-bottom: 1rem;
+}
+.user-input-search-section .user-search-news-box ul li p {
   font-size: 1rem;
   letter-spacing: 1px;
   line-height: 1.2;
   font-family: "Lato", sans-serif;
+  margin-top: 1rem;
 }
-
-button {
+.user-input-search-section .user-search-news-box ul li button {
   font-family: "Lato", sans-serif;
   border: 2px solid white;
   letter-spacing: 2px;
-  font-size: 1.3rem;
+  font-size: 0.75rem;
   padding: 0.5rem 0.75rem;
   border-radius: 2px;
   background-color: #23689B;
-  margin-left: 11px;
   text-transform: uppercase;
 }
-
-a {
+.user-input-search-section .user-search-news-box ul li a {
   text-decoration: none;
   color: white;
 }
-
-.fa-chevron-left {
-  -webkit-transform: translate(15px, 244px);
-          transform: translate(15px, 244px);
-}
-
-.right-arrow {
-  text-align: end;
-}
-
-.fa-chevron-right {
-  -webkit-transform: translate(-15px, -244px);
-          transform: translate(-15px, -244px);
+.user-input-search-section .user-search-news-box ul li img {
+  width: 100%;
 }

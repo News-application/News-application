@@ -17,16 +17,16 @@
 const newsApp = {};
 
 newsApp.init = () =>{
-    newsApp.getSearchNewsData();
+   
 }
 newsApp.apiKey = 'SUxZDfFHk_7an43AS0COUpTWC6lPF_LGXB1UKdWS2iojoBNq';
 
-newsApp.getSearchNewsData = () => {
+newsApp.getSearchNewsData = (userSearch) => {
     const url = new URL('https://api.currentsapi.services/v1/search');
 
     url.search = new URLSearchParams ({
         apiKey : newsApp.apiKey,
-        keywords : "car"
+        keywords : userSearch 
     });
 
     fetch(url)
@@ -34,17 +34,17 @@ newsApp.getSearchNewsData = () => {
         return results.json();
     })
     .then((data) => {
-        // console.log(data.news);
+        console.log(data.news);
         newsApp.displayNews(data.news);
     })
 }
 
 newsApp.displayNews = (listOfNews) => {
     const ulElement = document.querySelector('.list-of-news');
+    ulElement.innerHTML = " ";
 
     listOfNews.forEach((newsData) => {
 
-        // const ulElement = document.createElement('ul');
         const liElement = document.createElement('li');
         const headerElement = document.createElement('h3');
         const imageElement = document.createElement('img');
@@ -60,17 +60,43 @@ newsApp.displayNews = (listOfNews) => {
         anchorElement.innerHTML = 'Read more';
         anchorElement.target = '_blank';
 
-        // searchNewsContainer.appendChild(ulElement);
         ulElement.appendChild(liElement);
         buttonElement.appendChild(anchorElement);
         liElement.append(headerElement, imageElement, paraElement, buttonElement);
 
-
-
     })
 }
 
+newsApp.scrollNewsSection = () => {
+    const scrollingWindow = document.querySelector('#user-search-news-box');
+    const searchleftBtn = document.querySelector('.search-left-btn');
+    const searchRightBtn = document.querySelector('.search-right-btn');
+
+    searchleftBtn.addEventListener('click' , () => {
+        scrollingWindow.scrollLeft -= 300;
+    })
+    searchRightBtn.addEventListener('click' , () => {
+        scrollingWindow.scrollLeft += 300;
+    })
+}
+newsApp.scrollNewsSection();
 
 
+newsApp.getSearchNewsData('world');
+newsApp.getUserInput = () => {
+    const form = document.querySelector('#home-form')
+    const searchOutput = document.querySelector('.search-output');
+    form.addEventListener('submit', (e) => {
+        
+        const userInput = document.querySelector('.search-input').value;
+        searchOutput.innerHTML = userInput;
+
+        newsApp.getSearchNewsData(userInput);
+        console.log(userInput)
+        e.preventDefault();
+        // userInput.value = "";
+    })
+}
+newsApp.getUserInput();
 
 newsApp.init();
