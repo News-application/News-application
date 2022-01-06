@@ -261,11 +261,23 @@ html {
 
 li {
   list-style: none;
+  height: 500px;
+  border: 2px solid #23689B;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 25%;
+          flex: 0 0 25%;
+  overflow-y: scroll;
+  padding: 1rem;
+  margin: 0 1rem;
 }
 
 ul {
   padding: 0;
   margin: 0;
+}
+
+img {
+  width: 100%;
 }
 
 nav {
@@ -307,7 +319,7 @@ input[type=text] {
   letter-spacing: 2px;
   font-size: 1.3rem;
   padding: 0.5rem 0.75rem;
-  font-family: "Abril Fatface", cursive;
+  font-family: "Lato", sans-serif;
   border-radius: 2px;
   background-color: transparent;
   margin-left: 11px;
@@ -321,4 +333,56 @@ input[type=text] {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.list-of-news {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+p {
+  font-size: 1rem;
+  letter-spacing: 1px;
+  line-height: 1.2;
+  font-family: "Lato", sans-serif;
+}
+
+button {
+  font-family: "Lato", sans-serif;
+  border: 2px solid white;
+  letter-spacing: 2px;
+  font-size: 1.3rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 2px;
+  background-color: #23689B;
+  margin-left: 11px;
+  text-transform: uppercase;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.fa-chevron-left {
+  -webkit-transform: translate(15px, 244px);
+          transform: translate(15px, 244px);
+}
+
+.right-arrow {
+  text-align: end;
+}
+
+.fa-chevron-right {
+  -webkit-transform: translate(-15px, -244px);
+          transform: translate(-15px, -244px);
 }

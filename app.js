@@ -40,11 +40,11 @@ newsApp.getSearchNewsData = () => {
 }
 
 newsApp.displayNews = (listOfNews) => {
-    const searchNewsContainer = document.querySelector('#user-search-news');
+    const ulElement = document.querySelector('.list-of-news');
 
     listOfNews.forEach((newsData) => {
 
-        const ulElement = document.createElement('ul');
+        // const ulElement = document.createElement('ul');
         const liElement = document.createElement('li');
         const headerElement = document.createElement('h3');
         const imageElement = document.createElement('img');
@@ -60,7 +60,7 @@ newsApp.displayNews = (listOfNews) => {
         anchorElement.innerHTML = 'Read more';
         anchorElement.target = '_blank';
 
-        searchNewsContainer.appendChild(ulElement);
+        // searchNewsContainer.appendChild(ulElement);
         ulElement.appendChild(liElement);
         buttonElement.appendChild(anchorElement);
         liElement.append(headerElement, imageElement, paraElement, buttonElement);

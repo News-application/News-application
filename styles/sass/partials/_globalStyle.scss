@@ -21,8 +21,15 @@ html {
     margin: 0 auto;
     width: 85%;
 }
+
 li {
     list-style: none;
+    height: 500px;
+    border:  2px solid $colorBlue;
+    flex: 0 0 25%;
+    overflow-y: scroll;
+    padding: 1rem;
+    margin: 0 1rem;
 }
 
 ul {
@@ -31,3 +38,6 @@ ul {
 }
 
 
+img {
+    width: 100%;
+}
