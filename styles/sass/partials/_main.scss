@@ -1,0 +1,47 @@
+.list-of-news {
+    display: flex;
+    flex-direction: row;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+p {
+    font-size: 1rem;
+    letter-spacing: 1px;
+    line-height: 1.2;
+    font-family: $fontRegular400;
+}
+
+button{
+    font-family: $fontRegular400;
+    border: 2px solid white;
+    letter-spacing: 2px;
+    font-size: 1.3rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: 2px;
+    background-color: $colorBlue;
+    margin-left: 11px;
+    text-transform: uppercase;
+}
+
+a {
+    text-decoration: none;    
+    color: white;
+}
+
+.fa-chevron-left{
+    transform: translate(15px, 244px);
+}
+
+.right-arrow{
+    text-align: end;
+}
+.fa-chevron-right{
+    transform: translate(-15px, -244px);
+}
+// .user-search-section {
+//     display: flex;
+//     flex-direction: row;
+// }
