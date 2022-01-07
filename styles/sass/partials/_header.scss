@@ -1,45 +1,50 @@
 
 // nav bar section start here
-nav {
+.navbar{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding: 1rem 2rem;
     width: 100%;
     background-color: $colorLightBlue;
 
-    div h3 {
+    .news-logo h3 {
     font-size: 2rem;
     font-family: $fontBold700;
     color: $colorLightPastel;
     letter-spacing: 2px;
+
+
+    .navbar-menu{
+        #home-form{
+            display: flex;
+            align-items: center;
+
+            input[type="text"] {
+                border: 2px solid $colorLightBlue;
+                font-size: 1.3rem;
+                color: black;
+                padding: 0.5rem 0.75rem;
+            }
+            input[type="submit"]{
+                border: 2px solid white;
+                color: white;
+                letter-spacing: 2px;
+                font-size: 1.3rem;
+                padding: 0.5rem 0.75rem;
+                font-family: $fontRegular400;
+                border-radius: 2px;
+                background-color: transparent;
+                margin-left: 11px;
+                text-transform: uppercase;
+                }
+            }
+        }
+    }
 }
 
-}
 
-input[type="text"] {
-    border: 2px solid $colorLightBlue;
-    font-size: 1.3rem;
-    color: black;
-    padding: 0.5rem 0.75rem;
-}
 
-.search-btn {
-    border: 2px solid white;
-    color: white;
-    letter-spacing: 2px;
-    font-size: 1.3rem;
-    padding: 0.5rem 0.75rem;
-    font-family: $fontRegular400;
-    border-radius: 2px;
-    background-color: transparent;
-    margin-left: 11px;
-    text-transform: uppercase;
-}
 
-#home-form{
-    display: flex;
-    align-items: center;
-}
+
