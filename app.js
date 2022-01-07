@@ -82,7 +82,7 @@ newsApp.scrollNewsSection = () => {
 newsApp.scrollNewsSection();
 
 
-newsApp.getSearchNewsData('world');
+// newsApp.getSearchNewsData('world');
 newsApp.getUserInput = () => {
     const form = document.querySelector('#home-form')
     const searchOutput = document.querySelector('.search-output');
@@ -99,4 +99,4 @@ newsApp.getUserInput = () => {
 }
 newsApp.getUserInput();
 
-newsApp.init();
+// newsApp.init();
