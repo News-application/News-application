@@ -17,14 +17,14 @@
 <body>
     <!-- header start here -->
     <header>
-        <nav class="navbar">
-            <div class="news-logo">
+        <nav class="wrapper navbar">
+            <div class=" news-logo">
                 <h3>NEWS</h3>
             </div>
-            <div class="navbar-menu">
+            <div class=" navbar-menu">
                 <form action="#" id="home-form">
                     <label for="search-input" class="sr-only">Search Here</label>
-                    <input type="text" class="search-input" id="search-input" >
+                    <input type="text" class="search-input" id="search-input">
                     <input type="submit" class="search-btn" id="search-btn" value="Search">
                 </form>
                 <!-- language dropdown menu will be here-->
@@ -36,16 +36,19 @@
     <!-- main section start here -->
     <main>
         <!-- search-output-section start here -->
-        <section class="user-search-section">
-            <h3 class="search-output-title"> <span class="search-output">World</span> </h3>
-            <div class="user-input-search-section">
+        <section class=" wrapper user-search-section">
+            <h3 class="  search-output-title"> <span class="search-output">World</span> </h3>
+            <div class=" user-input-search-section">
                 <div class="search-left-btn">
                     <span><i class="fas fa-chevron-left"></i></span>
                 </div>
                 <div class="user-search-news-box" id="user-search-news-box">
                     <ul class="list-of-news">
-
+                        <!-- news printed here -->
                     </ul>
+                    <div>
+                        <p id="invalid-search-msg" class="hide"> Invalid search Try again (eg: Weather) </p>
+                    </div>
                 </div>
                 <div class="search-right-btn">
                     <span><i class="fas fa-chevron-right"></i></span>
@@ -57,7 +60,7 @@
         <!-- covid-cases-news-section start here -->
         <section class="covid-section">
             <!-- covid-19 current cases data and news will be print herer -->
-            <article class="covid-cases">
+            <article class=" wrapper covid-cases">
                 <h3>Covid-19</h3>
                 <div class="covid-data">
                     <div class="canada-flag-img">
@@ -69,21 +72,21 @@
                     </div>
                 </div>
             </article>
-            <article>
-                    <h3 class="covid-news-title">COVID News in Canada</h3>
-                    <div class="covid-cases-news-section">
-                        <div class="covid-left-btn">
-                            <span><i class="fas fa-chevron-left"></i></span>
-                        </div>
-                        <div class="covid-news-box" id="covid-news-box">
-                            <ul class="list-of-covid-news">
-
-                            </ul>
-                        </div>
-                        <div class="covid-right-btn">
-                            <span><i class="fas fa-chevron-right"></i></span>
-                        </div>
+            <article class="wrapper">
+                <h3 class="covid-news-title">COVID-19 Canada-News</h3>
+                <div class="covid-cases-news-section">
+                    <div class="covid-left-btn">
+                        <span><i class="fas fa-chevron-left"></i></span>
                     </div>
+                    <div class="covid-news-box" id="covid-news-box">
+                        <ul class=" list-of-covid-news">
+                            <!-- covid- news printed here -->
+                        </ul>
+                    </div>
+                    <div class="covid-right-btn">
+                        <span><i class="fas fa-chevron-right"></i></span>
+                    </div>
+                </div>
             </article>
         </section>
         <!-- covid-cases-news-section end here -->
@@ -93,7 +96,7 @@
 
     <!-- footer section start here -->
     <footer>
-        <p class="footer-copyright">Copyright &copy; 2021 <span><a href="https://junocollege.com/">Juno College of
+        <p class="footer-copyright">Copyright &copy; 2021 <span><a href="https://junocollege.com/" tabindex="_blank">Juno College of
                     Technology</a></span></p>
     </footer>
     <!-- footer section end here -->

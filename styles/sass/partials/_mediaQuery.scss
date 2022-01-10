@@ -1,60 +1,65 @@
-// 1100 px
+// media query for 1100px 
 
 @media (max-width: 1100px) {
-    .user-input-search-section .user-search-news-box, .covid-cases-news-section .covid-news-box {
-    ul li{
-        flex: 0 0 35%;
+    .user-input-search-section .user-search-news-box,
+    .covid-cases-news-section .covid-news-box {
+        ul li{
+            flex: 0 0 35%;
+            }
+    }
+    .covid-cases{
+        width: 70%;
     }
 }
-.covid-cases{
-    width: 70%;
-}
-}
+
+// media query for 810px
+// ====================
 
 @media (max-width: 810px) {
     .user-input-search-section .user-search-news-box, .covid-cases-news-section .covid-news-box {
-    ul li{
-        flex: 0 0 45%;
+        ul li{
+            flex: 0 0 45%;
+        }
+    }
+    .covid-cases{
+        width: 80%;
     }
 }
-.covid-cases{
-    width: 80%;
-}
-}
 
+// media query for 700px
+// ============
 @media (max-width: 700px) {
-
-.navbar {
-    flex-direction: column;
-    .navbar-menu #home-form {
-        margin-top: 0.5rem;
+    
+    .navbar {
         flex-direction: column;
-
-        input[type="submit"]{
+        .navbar-menu #home-form {
             margin-top: 0.5rem;
+            flex-direction: column;
+
+            input[type="submit"]{
+                margin-top: 0.5rem;
+            }
         }
     }
 
-}
-
-.search-output-title, 
-.covid-news-title, 
-.covid-cases h3  {
-    margin-left: 0;
-    text-align: center;
-}
+    .search-output-title, 
+    .covid-news-title, 
+    .covid-cases h3  {
+        margin-left: 0;
+        text-align: center;
+    }
 
     .user-input-search-section .user-search-news-box, .covid-cases-news-section .covid-news-box {
         overflow-x: scroll;
-    
-    ul li{
-        flex: 0 0 90%;
+        
+        ul li{
+            flex: 0 0 90%;
+        }
+    } 
+    .covid-cases{
+        width: 90%;
     }
-} 
-.covid-cases{
-    width: 90%;
-}
-.covid-data{
+    .covid-data{
         flex-direction: column;
-}
+    }
 }
