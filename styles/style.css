@@ -393,3 +393,45 @@ p {
 .user-input-search-section .user-search-news-box ul li img {
   width: 100%;
 }
+
+.covid-cases {
+  width: 50%;
+  margin: 0 auto;
+}
+.covid-cases h3 {
+  margin: 1rem 0 1rem 5rem;
+  text-transform: capitalize;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.covid-data {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 1rem;
+  padding: 1rem;
+  border: 2px solid #23689B;
+}
+.covid-data .canada-flag-img {
+  width: 100%;
+}
+.covid-data .canada-flag-img img {
+  width: 100%;
+}
+
+.covid-cases-data {
+  width: 100%;
+  margin-left: 1rem;
+}
+.covid-cases-data h4 {
+  color: #23689B;
+  text-transform: uppercase;
+}
+.covid-cases-data ul li {
+  line-height: 1.5;
+  font-weight: 700;
+}
+.covid-cases-data ul li span {
+  font-weight: 400;
+}

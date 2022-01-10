@@ -1,3 +1,4 @@
+
 .search-output-title{
     margin: 1rem 0 1rem 5rem;
     text-transform: capitalize;
@@ -65,6 +66,46 @@
     }
 }
 
+// covid cases data
+.covid-cases{
+    width: 50%;
+    margin: 0 auto;
+
+    h3{
+        margin: 1rem 0 1rem 5rem;
+        text-transform: capitalize;
+        font-size: 2rem;
+        text-align: center;
+    }
+}
+.covid-data{
+    display: flex;
+    margin-left: 1rem;
+    padding: 1rem;
+    border:  2px solid $colorBlue;
+    .canada-flag-img{
+        width: 100%;
+        img{
+            width: 100%;
+        }
+    }
+}
+.covid-cases-data{
+    width: 100%;
+    margin-left: 1rem;
+    h4{
+        color: $colorBlue;
+        text-transform: uppercase;
+    }
+    ul li {
+     line-height: 1.5;
+     font-weight: 700;
+    }
+    ul li span {
+        font-weight: 400;
+    }
+
+}
 
 
 

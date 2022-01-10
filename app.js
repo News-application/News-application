@@ -34,9 +34,17 @@ newsApp.getSearchNewsData = (userSearch) => {
         return results.json();
     })
     .then((data) => {
-        console.log(data.news);
-        newsApp.displayNews(data.news);
+        newsApp.filterImgArray(data.news);
+        newsApp.displayNews(newsApp.filteredArray);
     })
+}
+newsApp.filteredArray = [];
+
+newsApp.filterImgArray = (arrayData) => {
+    newsApp.filteredArray =  arrayData.filter((listOfImg) => {
+        return listOfImg = listOfImg.image !== "None";
+    })
+
 }
 
 newsApp.displayNews = (listOfNews) => {
@@ -82,7 +90,7 @@ newsApp.scrollNewsSection = () => {
 newsApp.scrollNewsSection();
 
 
-// newsApp.getSearchNewsData('world');
+newsApp.getSearchNewsData('world');
 newsApp.getUserInput = () => {
     const form = document.querySelector('#home-form')
     const searchOutput = document.querySelector('.search-output');
@@ -99,4 +107,4 @@ newsApp.getUserInput = () => {
 }
 newsApp.getUserInput();
 
-// newsApp.init();
+newsApp.init();
