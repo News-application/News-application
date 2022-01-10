@@ -4,7 +4,7 @@ const covidApp = {};
 covidApp.init = () => {
     covidApp.getCovidCases()
     covidApp.getCovidNewsData();
-
+    covidApp.scrollNewsSection();
 }
 
 
@@ -72,6 +72,19 @@ covidApp.filterImgArray = (arrayData) => {
         
     })
 
+}
+
+covidApp.scrollNewsSection = () => {
+    const scrollingWindow = document.querySelector('#covid-news-box');
+    const searchleftBtn = document.querySelector('.covid-left-btn');
+    const searchRightBtn = document.querySelector('.covid-right-btn');
+
+    searchleftBtn.addEventListener('click', () => {
+        scrollingWindow.scrollLeft -= 300;
+    })
+    searchRightBtn.addEventListener('click', () => {
+        scrollingWindow.scrollLeft += 300;
+    })
 }
 
 covidApp.displayCovidNews = (listOfNews) => {
