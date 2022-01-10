@@ -1,15 +1,19 @@
 
-.search-output-title{
+.search-output-title,
+.covid-news-title {
     margin: 1rem 0 1rem 5rem;
     text-transform: capitalize;
     font-size: 2rem;
 }
-.user-input-search-section {
+.user-input-search-section, 
+.covid-cases-news-section{
     display: flex;
     align-items: center;
 
     .search-left-btn,
-    .search-right-btn{
+    .search-right-btn,
+    .covid-left-btn,
+    .covid-right-btn{
         font-size: 2rem;
         color: $colorBlue;
         margin: 0 1rem;
@@ -19,7 +23,8 @@
         }
     }
 
-    .user-search-news-box{
+    .user-search-news-box, 
+    .covid-news-box {
         overflow-x: hidden;
         ul{
             display: flex;
@@ -83,6 +88,7 @@
     margin-left: 1rem;
     padding: 1rem;
     border:  2px solid $colorBlue;
+    margin-bottom: 35px;
     .canada-flag-img{
         width: 100%;
         img{
@@ -104,13 +110,22 @@
     ul li span {
         font-weight: 400;
     }
-
 }
 
 
-
-
-
-
-
-
+footer{
+    background: $colorLightBlue;
+    padding: 0.5rem 0;
+    margin-top: 4rem;
+    p{
+        text-align: center;
+        color: $colorLightPastel;
+        margin: 0;
+        a{
+            color: $colorLightPastel;
+            &:hover{
+                color: $colorLightPastel;
+            }
+        }
+    }
+}

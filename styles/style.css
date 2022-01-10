@@ -294,7 +294,7 @@ p {
   color: #F4F5DB;
   letter-spacing: 2px;
 }
-.navbar .news-logo h3 .navbar-menu #home-form {
+.navbar .navbar-menu #home-form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -302,13 +302,13 @@ p {
       -ms-flex-align: center;
           align-items: center;
 }
-.navbar .news-logo h3 .navbar-menu #home-form input[type=text] {
+.navbar .navbar-menu #home-form input[type=text] {
   border: 2px solid #487E95;
   font-size: 1.3rem;
   color: black;
   padding: 0.5rem 0.75rem;
 }
-.navbar .news-logo h3 .navbar-menu #home-form input[type=submit] {
+.navbar .navbar-menu #home-form input[type=submit] {
   border: 2px solid white;
   color: white;
   letter-spacing: 2px;
@@ -321,13 +321,15 @@ p {
   text-transform: uppercase;
 }
 
-.search-output-title {
+.search-output-title,
+.covid-news-title {
   margin: 1rem 0 1rem 5rem;
   text-transform: capitalize;
   font-size: 2rem;
 }
 
-.user-input-search-section {
+.user-input-search-section,
+.covid-cases-news-section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -336,25 +338,46 @@ p {
           align-items: center;
 }
 .user-input-search-section .search-left-btn,
-.user-input-search-section .search-right-btn {
+.user-input-search-section .search-right-btn,
+.user-input-search-section .covid-left-btn,
+.user-input-search-section .covid-right-btn,
+.covid-cases-news-section .search-left-btn,
+.covid-cases-news-section .search-right-btn,
+.covid-cases-news-section .covid-left-btn,
+.covid-cases-news-section .covid-right-btn {
   font-size: 2rem;
   color: #23689B;
   margin: 0 1rem;
   cursor: pointer;
 }
 .user-input-search-section .search-left-btn:hover,
-.user-input-search-section .search-right-btn:hover {
+.user-input-search-section .search-right-btn:hover,
+.user-input-search-section .covid-left-btn:hover,
+.user-input-search-section .covid-right-btn:hover,
+.covid-cases-news-section .search-left-btn:hover,
+.covid-cases-news-section .search-right-btn:hover,
+.covid-cases-news-section .covid-left-btn:hover,
+.covid-cases-news-section .covid-right-btn:hover {
   color: #487E95;
 }
-.user-input-search-section .user-search-news-box {
+.user-input-search-section .user-search-news-box,
+.user-input-search-section .covid-news-box,
+.covid-cases-news-section .user-search-news-box,
+.covid-cases-news-section .covid-news-box {
   overflow-x: hidden;
 }
-.user-input-search-section .user-search-news-box ul {
+.user-input-search-section .user-search-news-box ul,
+.user-input-search-section .covid-news-box ul,
+.covid-cases-news-section .user-search-news-box ul,
+.covid-cases-news-section .covid-news-box ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-.user-input-search-section .user-search-news-box ul li {
+.user-input-search-section .user-search-news-box ul li,
+.user-input-search-section .covid-news-box ul li,
+.covid-cases-news-section .user-search-news-box ul li,
+.covid-cases-news-section .covid-news-box ul li {
   height: 500px;
   border: 2px solid #23689B;
   -webkit-box-flex: 0;
@@ -364,19 +387,28 @@ p {
   padding: 1rem;
   margin: 0 1rem;
 }
-.user-input-search-section .user-search-news-box ul li h3 {
+.user-input-search-section .user-search-news-box ul li h3,
+.user-input-search-section .covid-news-box ul li h3,
+.covid-cases-news-section .user-search-news-box ul li h3,
+.covid-cases-news-section .covid-news-box ul li h3 {
   font-size: 1.2rem;
   color: #23689B;
   margin-bottom: 1rem;
 }
-.user-input-search-section .user-search-news-box ul li p {
+.user-input-search-section .user-search-news-box ul li p,
+.user-input-search-section .covid-news-box ul li p,
+.covid-cases-news-section .user-search-news-box ul li p,
+.covid-cases-news-section .covid-news-box ul li p {
   font-size: 1rem;
   letter-spacing: 1px;
   line-height: 1.2;
   font-family: "Lato", sans-serif;
   margin-top: 1rem;
 }
-.user-input-search-section .user-search-news-box ul li button {
+.user-input-search-section .user-search-news-box ul li button,
+.user-input-search-section .covid-news-box ul li button,
+.covid-cases-news-section .user-search-news-box ul li button,
+.covid-cases-news-section .covid-news-box ul li button {
   font-family: "Lato", sans-serif;
   border: 2px solid white;
   letter-spacing: 2px;
@@ -386,11 +418,17 @@ p {
   background-color: #23689B;
   text-transform: uppercase;
 }
-.user-input-search-section .user-search-news-box ul li a {
+.user-input-search-section .user-search-news-box ul li a,
+.user-input-search-section .covid-news-box ul li a,
+.covid-cases-news-section .user-search-news-box ul li a,
+.covid-cases-news-section .covid-news-box ul li a {
   text-decoration: none;
   color: white;
 }
-.user-input-search-section .user-search-news-box ul li img {
+.user-input-search-section .user-search-news-box ul li img,
+.user-input-search-section .covid-news-box ul li img,
+.covid-cases-news-section .user-search-news-box ul li img,
+.covid-cases-news-section .covid-news-box ul li img {
   width: 100%;
 }
 
@@ -412,6 +450,7 @@ p {
   margin-left: 1rem;
   padding: 1rem;
   border: 2px solid #23689B;
+  margin-bottom: 35px;
 }
 .covid-data .canada-flag-img {
   width: 100%;
@@ -434,4 +473,89 @@ p {
 }
 .covid-cases-data ul li span {
   font-weight: 400;
+}
+
+footer {
+  background: #487E95;
+  padding: 0.5rem 0;
+  margin-top: 4rem;
+}
+footer p {
+  text-align: center;
+  color: #F4F5DB;
+  margin: 0;
+}
+footer p a {
+  color: #F4F5DB;
+}
+footer p a:hover {
+  color: #F4F5DB;
+}
+
+@media (max-width: 1100px) {
+  .user-input-search-section .user-search-news-box ul li, .covid-cases-news-section .covid-news-box ul li {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 35%;
+            flex: 0 0 35%;
+  }
+
+  .covid-cases {
+    width: 70%;
+  }
+}
+@media (max-width: 810px) {
+  .user-input-search-section .user-search-news-box ul li, .covid-cases-news-section .covid-news-box ul li {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 45%;
+            flex: 0 0 45%;
+  }
+
+  .covid-cases {
+    width: 80%;
+  }
+}
+@media (max-width: 700px) {
+  .navbar {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .navbar .navbar-menu #home-form {
+    margin-top: 0.5rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .navbar .navbar-menu #home-form input[type=submit] {
+    margin-top: 0.5rem;
+  }
+
+  .search-output-title,
+.covid-news-title,
+.covid-cases h3 {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .user-input-search-section .user-search-news-box, .covid-cases-news-section .covid-news-box {
+    overflow-x: scroll;
+  }
+  .user-input-search-section .user-search-news-box ul li, .covid-cases-news-section .covid-news-box ul li {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 90%;
+            flex: 0 0 90%;
+  }
+
+  .covid-cases {
+    width: 90%;
+  }
+
+  .covid-data {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }

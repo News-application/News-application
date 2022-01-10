@@ -97,12 +97,12 @@ newsApp.getUserInput = () => {
     form.addEventListener('submit', (e) => {
         
         const userInput = document.querySelector('.search-input').value;
+        userInput.value = '';
         searchOutput.innerHTML = userInput;
-
         newsApp.getSearchNewsData(userInput);
         console.log(userInput)
         e.preventDefault();
-        // userInput.value = "";
+        
     })
 }
 newsApp.getUserInput();
