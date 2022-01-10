@@ -11,16 +11,22 @@
 //  api key :   SUxZDfFHk_7an43AS0COUpTWC6lPF_LGXB1UKdWS2iojoBNq
 // url :  https://api.currentsapi.services/v1/search
 
-
 // create printNews function to print news on website
 
+
+// name spacing object
 const newsApp = {};
 
+// init function
 newsApp.init = () =>{
-   
+    newsApp.getUserInput();
+    newsApp.scrollNewsSection();
 }
+
+// api key
 newsApp.apiKey = 'SUxZDfFHk_7an43AS0COUpTWC6lPF_LGXB1UKdWS2iojoBNq';
 
+//create function to get data from api 
 newsApp.getSearchNewsData = (userSearch) => {
     const url = new URL('https://api.currentsapi.services/v1/search');
 
@@ -34,10 +40,21 @@ newsApp.getSearchNewsData = (userSearch) => {
         return results.json();
     })
     .then((data) => {
+
         newsApp.filterImgArray(data.news);
         newsApp.displayNews(newsApp.filteredArray);
+        newsApp.invalidInputMsg(newsApp.filteredArray);
     })
 }
+// create function to show invalid input message to user.
+newsApp.invalidInputMsg = (array) => {
+    const invalidMsg = document.querySelector('#invalid-search-msg');
+    if(array.lenght < 1) {
+        invalidMsg.classList.remove('hide');
+    }
+}
+
+// create new array to filter none image object
 newsApp.filteredArray = [];
 
 newsApp.filterImgArray = (arrayData) => {
@@ -47,6 +64,7 @@ newsApp.filterImgArray = (arrayData) => {
 
 }
 
+// create function to print news on website
 newsApp.displayNews = (listOfNews) => {
     const ulElement = document.querySelector('.list-of-news');
     ulElement.innerHTML = " ";
@@ -69,12 +87,12 @@ newsApp.displayNews = (listOfNews) => {
         anchorElement.target = '_blank';
 
         ulElement.appendChild(liElement);
-        buttonElement.appendChild(anchorElement);
-        liElement.append(headerElement, imageElement, paraElement, buttonElement);
+        liElement.append(headerElement, imageElement, paraElement, anchorElement);
 
     })
 }
 
+// create function to add feature on left and right button to scroll news section
 newsApp.scrollNewsSection = () => {
     const scrollingWindow = document.querySelector('#user-search-news-box');
     const searchleftBtn = document.querySelector('.search-left-btn');
@@ -87,24 +105,22 @@ newsApp.scrollNewsSection = () => {
         scrollingWindow.scrollLeft += 300;
     })
 }
-newsApp.scrollNewsSection();
-
 
 newsApp.getSearchNewsData('world');
+
+// submit event to store user input and give argumnet to fetch fuunction
 newsApp.getUserInput = () => {
     const form = document.querySelector('#home-form')
     const searchOutput = document.querySelector('.search-output');
     form.addEventListener('submit', (e) => {
-        
         const userInput = document.querySelector('.search-input').value;
         userInput.value = '';
         searchOutput.innerHTML = userInput;
         newsApp.getSearchNewsData(userInput);
-        console.log(userInput)
         e.preventDefault();
-        
+        document.querySelector('.search-input').value = '';        
     })
 }
-newsApp.getUserInput();
 
+//  called init function
 newsApp.init();

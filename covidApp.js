@@ -1,27 +1,27 @@
+// name spacing object for covidApp
 const covidApp = {};
 
-
+// call init function
 covidApp.init = () => {
     covidApp.getCovidCases()
     covidApp.getCovidNewsData();
     covidApp.scrollNewsSection();
 }
 
-
+// create function get covid data 
 covidApp.getCovidCases = () => {
 
     fetch("https://api.covid19api.com/summary")
     .then(function (res) {
         return res.json();
     }).then(function (jsonResults) {
-        // console.log(jsonResults.Countries);
         covidApp.displayCanadaCases(jsonResults.Countries);
     })
 }
 
 
 
-
+// print covid data on website
 covidApp.displayCanadaCases = (arrayData) => {
     const CovidCasesData = document.querySelector('.covid-cases-data')
     arrayData.forEach((listOfData) => {
@@ -38,13 +38,18 @@ covidApp.displayCanadaCases = (arrayData) => {
             CovidCasesData.append(ulElement);
 
         }
-    })
-    
+    }) 
 }
 
+
+// =====================
 // covid-19 news section
+// =========================
+
+// api key
 covidApp.apiKey = 'SUxZDfFHk_7an43AS0COUpTWC6lPF_LGXB1UKdWS2iojoBNq';  
 
+// create function tpo get covid news form api
 covidApp.getCovidNewsData = () => {
     const url = new URL('https://api.currentsapi.services/v1/search');
 
@@ -59,21 +64,21 @@ covidApp.getCovidNewsData = () => {
             return results.json();
         })
         .then((data) => {
-            console.log(data.news);
             covidApp.filterImgArray(data.news);
             covidApp.displayCovidNews(covidApp.filterImgArray);
         })
 }
+
+// create new array to filter none image object
 covidApp.filterImgArray = [];
 
 covidApp.filterImgArray = (arrayData) => {
     covidApp.filterImgArray = arrayData.filter((listOfImg) => {
-        return listOfImg = listOfImg.image !== "None"
-        
+        return listOfImg = listOfImg.image !== "None"    
     })
-
 }
 
+// create new function to scroll news section right and left
 covidApp.scrollNewsSection = () => {
     const scrollingWindow = document.querySelector('#covid-news-box');
     const searchleftBtn = document.querySelector('.covid-left-btn');
@@ -87,6 +92,8 @@ covidApp.scrollNewsSection = () => {
     })
 }
 
+
+// create print function to print news in website
 covidApp.displayCovidNews = (listOfNews) => {
     const ulElement = document.querySelector('.list-of-covid-news');
     ulElement.innerHTML = " ";
@@ -109,10 +116,10 @@ covidApp.displayCovidNews = (listOfNews) => {
         anchorElement.target = '_blank';
 
         ulElement.appendChild(liElement);
-        buttonElement.appendChild(anchorElement);
-        liElement.append(headerElement, imageElement, paraElement, buttonElement);
+        liElement.append(headerElement, imageElement, paraElement, anchorElement);
 
     })
 }
 
+// called init function
 covidApp.init();

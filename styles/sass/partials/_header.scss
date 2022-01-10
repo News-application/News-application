@@ -1,5 +1,8 @@
 
 // nav bar section start here
+header {
+    background-color: $colorLightBlue;
+}
 .navbar{
     display: flex;
     flex-direction: row;
@@ -7,12 +10,11 @@
     align-items: center;
     padding: 1rem 2rem;
     width: 100%;
-    background-color: $colorLightBlue;
 
     .news-logo h3 {
     font-size: 2rem;
     font-family: $fontBold700;
-    color: $colorLightPastel;
+    color: $whiteColor;
     letter-spacing: 2px;
     }
 
@@ -31,17 +33,23 @@
                 border: 2px solid white;
                 color: white;
                 letter-spacing: 2px;
-                font-size: 1.3rem;
+                font-size: 1rem;
                 padding: 0.5rem 0.75rem;
                 font-family: $fontRegular400;
                 border-radius: 2px;
                 background-color: transparent;
                 margin-left: 11px;
+                margin-right: 1rem;
+
                 text-transform: uppercase;
+                &:hover{
+                    border: 2px solid $whiteColor;
+                    background-color: $whiteColor;
+                    color: $colorLightBlue;
                 }
             }
         }
-    
+    }  
 }
 
 
