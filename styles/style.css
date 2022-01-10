@@ -244,7 +244,7 @@ html {
 .wrapper {
   max-width: 1400px;
   margin: 0 auto;
-  width: 85%;
+  width: 90%;
 }
 
 li {
@@ -543,6 +543,10 @@ footer p a:hover {
   }
 }
 @media (max-width: 700px) {
+  .wrapper {
+    width: 100%;
+  }
+
   .navbar {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
