@@ -23,6 +23,15 @@ newsApp.init = () =>{
     newsApp.scrollNewsSection();
 }
 
+newsApp.filteredArray = [];
+
+newsApp.filterImgArray = (arrayData) => {
+    newsApp.filteredArray =  arrayData.filter((listOfImg) => {
+        return listOfImg = listOfImg.image !== "None";
+    })
+    
+}
+
 // api key
 newsApp.apiKey = 'SUxZDfFHk_7an43AS0COUpTWC6lPF_LGXB1UKdWS2iojoBNq';
 
@@ -40,28 +49,23 @@ newsApp.getSearchNewsData = (userSearch) => {
         return results.json();
     })
     .then((data) => {
-
+        console.log(data.news);
         newsApp.filterImgArray(data.news);
         newsApp.displayNews(newsApp.filteredArray);
         newsApp.invalidInputMsg(newsApp.filteredArray);
     })
 }
+
+
+// create new array to filter none image object
+
 // create function to show invalid input message to user.
 newsApp.invalidInputMsg = (array) => {
     const invalidMsg = document.querySelector('#invalid-search-msg');
-    if(array.lenght < 1) {
+    console.log(array.length);
+    if (array.length < 1) {
         invalidMsg.classList.remove('hide');
     }
-}
-
-// create new array to filter none image object
-newsApp.filteredArray = [];
-
-newsApp.filterImgArray = (arrayData) => {
-    newsApp.filteredArray =  arrayData.filter((listOfImg) => {
-        return listOfImg = listOfImg.image !== "None";
-    })
-
 }
 
 // create function to print news on website
@@ -114,7 +118,6 @@ newsApp.getUserInput = () => {
     const searchOutput = document.querySelector('.search-output');
     form.addEventListener('submit', (e) => {
         const userInput = document.querySelector('.search-input').value;
-        userInput.value = '';
         searchOutput.innerHTML = userInput;
         newsApp.getSearchNewsData(userInput);
         e.preventDefault();

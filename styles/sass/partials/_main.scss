@@ -145,7 +145,10 @@ footer{
 
 // hide class for invalid msg 
 .hide{
-    display: none;
+    display: none; 
+}
+#invalid-search-msg{
     color: $colorLightBlue;
     text-transform: capitalize;
+    text-align: center;
 }

@@ -515,8 +515,12 @@ footer p a:hover {
 
 .hide {
   display: none;
+}
+
+#invalid-search-msg {
   color: #487E95;
   text-transform: capitalize;
+  text-align: center;
 }
 
 @media (max-width: 1100px) {
