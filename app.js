@@ -49,7 +49,6 @@ newsApp.getSearchNewsData = (userSearch) => {
         return results.json();
     })
     .then((data) => {
-        console.log(data.news);
         newsApp.filterImgArray(data.news);
         newsApp.displayNews(newsApp.filteredArray);
         newsApp.invalidInputMsg(newsApp.filteredArray);
@@ -62,7 +61,6 @@ newsApp.getSearchNewsData = (userSearch) => {
 // create function to show invalid input message to user.
 newsApp.invalidInputMsg = (array) => {
     const invalidMsg = document.querySelector('#invalid-search-msg');
-    console.log(array.length);
     if (array.length < 1) {
         invalidMsg.classList.remove('hide');
     }
